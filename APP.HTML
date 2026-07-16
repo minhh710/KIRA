@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KAI HIDDEN - CRACKED</title>
+    <style>
+        /* Reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            user-select: none;
+        }
+        body {
+            background: #0b0e14;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 12px;
+        }
+        .app {
+            width: 100%;
+            max-width: 400px;
+            background: linear-gradient(145deg, #141a24, #1e2634);
+            border-radius: 32px;
+            padding: 20px 16px 28px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 1px 2px rgba(255,255,255,0.05);
+            color: #e0e6f0;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #2a3444;
+        }
+        .header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #f0b34b, #f7d875);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
+        }
+        .header .badge {
+            background: #d43f3f;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 10px #d43f3f88;
+        }
+        /* Info bar */
+        .info-bar {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #8a9bb5;
+            padding: 8px 0;
+            border-bottom: 1px solid #1f2838;
+            flex-wrap: wrap;
+        }
+        .info-bar span {
+            background: #1b2332;
+            padding: 4px 10px;
+            border-radius: 16px;
+            margin: 2px 0;
+        }
+        /* Function list */
+        .function-group {
+            margin: 16px 0 8px;
+        }
+        .function-group .group-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #a0b3d0;
+            letter-spacing: 1px;
+            padding: 4px 0 8px;
+            border-bottom: 1px dashed #2c3a4e;
+        }
+        .func-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 4px;
+            border-bottom: 1px solid #1f2838;
+        }
+        .func-item:last-child {
+            border-bottom: none;
+        }
+        .func-label {
+            font-size: 15px;
+            font-weight: 500;
+            color: #d6e0f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .func-label .icon {
+            font-size: 18px;
+        }
+        /* Toggle switch */
+        .switch {
+            position: relative;
+            width: 48px;
+            height: 26px;
+            background: #2c3a4e;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+        .switch.active {
+            background: #3b9e6d;
+            box-shadow: 0 0 12px #3b9e6d77;
+        }
+        .switch .thumb {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+            background: #eaeef5;
+            border-radius: 50%;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+        .switch.active .thumb {
+            transform: translateX(22px);
+            background: #fff;
+        }
+        /* Additional buttons */
+        .action-row {
+            display: flex;
+            gap: 10px;
+            margin: 12px 0 10px;
+            flex-wrap: wrap;
+        }
+        .action-btn {
+            flex: 1;
+            min-width: 60px;
+            padding: 10px 0;
+            background: #1f2838;
+            border: none;
+            border-radius: 14px;
+            color: #bcc9e0;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            box-shadow: inset 0 -2px 0 #0e131e;
+            transition: 0.15s;
+            cursor: pointer;
+        }
+        .action-btn:active {
+            transform: scale(0.95);
+        }
+        .action-btn.highlight {
+            background: #3b6ea0;
+            color: #fff;
+            box-shadow: inset 0 -2px 0 #1f3e5e;
+        }
+        /* Slider (vuốt) */
+        .slider-container {
+            padding: 8px 0;
+        }
+        .slider-container label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #a0b3d0;
+        }
+        input[type="range"] {
+            width: 100%;
+            -webkit-appearance: none;
+            background: transparent;
+            margin: 6px 0;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            background: #1f2838;
+            border-radius: 3px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #e0e6f0;
+            border-radius: 50%;
+            margin-top: -6px;
+            box-shadow: 0 2px 6px #00000066;
+            border: 2px solid #3b9e6d;
+        }
+        /* Info panels */
+        .info-panel {
+            background: #111a26;
+            border-radius: 16px;
+            padding: 12px 14px;
+            margin: 12px 0 6px;
+            font-size: 13px;
+            border: 1px solid #253040;
+        }
+        .info-panel .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid #1b2332;
+        }
+        .info-panel .row:last-child {
+            border-bottom: none;
+        }
+        .info-panel .label {
+            color: #7e92b0;
+        }
+        .info-panel .value {
+            color: #e0e6f0;
+            font-weight: 500;
+            word-break: break-all;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 11px;
+            color: #4a5a72;
+            letter-spacing: 0.3px;
+        }
+        /* Scroll / vuốt hint */
+        .swipe-hint {
+            font-size: 12px;
+            color: #5d728e;
+            text-align: center;
+            padding: 4px 0;
+        }
+        /* responsiveness */
+        @media (max-width: 420px) {
+            .app { padding: 14px 12px; }
+            .func-label { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="app" id="app">
+    <!-- Header -->
+    <div class="header">
+        <h1>KAI HIDDEN</h1>
+        <span class="badge">CRACKED</span>
+    </div>
+    <!-- Info bar -->
+    <div class="info-bar">
+        <span>⚡ TIPA KAI CRACK NO KEY</span>
+        <span>📱 v4.2.0</span>
+    </div>
+
+    <!-- FUNCTION GROUP 1 -->
+    <div class="function-group">
+        <div class="group-title">🔧 FUNCTION</div>
+        <!-- ESP -->
+        <div class="func-item">
+            <span class="func-label"><span class="icon">👁️</span> ESP</span>
+            <div class="switch active" data-target="esp"><div class="thumb"></div></div>
+        </div>
+        <!-- AMIBOT -->
+        <div class="func-item">
+            <span class="func-label"><span class="icon">🤖</span> AMIBOT</span>
+            <div class="switch" data-target="amibot"><div class="thumb"></div></div>
+        </div>
+        <!-- INFO -->
+        <div class="func-item">
+            <span class="func-label"><span class="icon">ℹ️</span> INFO</span>
+            <div class="switch active" data-target="info"><div class="thumb"></div></div>
+        </div>
+        <!-- ABOUT -->
+        <div class="func-item">
+            <span class="func-label"><span class="icon">📄</span> ABOUT</span>
+            <div class="switch" data-target="about"><div class="thumb"></div></div>
+        </div>
+    </div>
+
+    <!-- FUNCTION GROUP 2 -->
+    <div class="function-group">
+        <div class="group-title">⚙️ FUNCTION</div>
+        <!-- Đổi Súng Nhanh -->
+        <div class="func-item">
+            <span class="func-label"><span class="icon">🔫</span> Đổi Súng Nhanh</span>
+            <div class="switch active" data-target="fast_swap"><div class="thumb"></div></div>
+        </div>
+        <!-- Đan Thắng (có thể là auto win) -->
+        <div class="func-item">
+            <span class="func-label"><span class="icon">🏆</span> Đan Thắng</span>
+            <div class="switch" data-target="auto_win"><div class="thumb"></div></div>
+        </div>
+        <!-- Cam Cao (có thể là high FPS?) -->
+        <div class="func-item">
+            <span class="func-label"><span class="icon">📈</span> Cam Cao</span>
+            <div class="switch" data-target="high_fps"><div class="thumb"></div></div>
+        </div>
+    </div>
+
+    <!-- AIM function (toggle) -->
+    <div class="func-item" style="border-top: 1px solid #2a3444; margin-top: 4px;">
+        <span class="func-label"><span class="icon">🎯</span> AIM (Auto‑Aim)</span>
+        <div class="switch" data-target="aim"><div class="thumb"></div></div>
+    </div>
+
+    <!-- Slider (vuốt - sensitivity) -->
+    <div class="slider-container">
+        <label>
+            <span>🎚️ Độ nhạy Aim (Vuốt)</span>
+            <span id="sensVal">75%</span>
+        </label>
+        <input type="range" min="0" max="100" value="75" id="sensitivitySlider">
+    </div>
+
+    <!-- Action buttons: Mượn, Ổn định, v.v -->
+    <div class="action-row">
+        <button class="action-btn highlight" id="borrowBtn">📦 Mượn</button>
+        <button class="action-btn" id="stabilizeBtn">⚙️ Ổn định</button>
+        <button class="action-btn" id="serverInfoBtn">🖥️ Server</button>
+    </div>
+
+    <!-- Info panels -->
+    <div class="info-panel" id="deviceInfo">
+        <div class="row"><span class="label">Thiết bị</span><span class="value" id="deviceName">iPhone 15 Pro Max</span></div>
+        <div class="row"><span class="label">HĐH</span><span class="value" id="osVersion">iOS 18.2</span></div>
+        <div class="row"><span class="label">RAM</span><span class="value" id="ramInfo">6.2 GB / 8 GB</span></div>
+        <div class="row"><span class="label">Pin</span><span class="value" id="batteryInfo">87%</span></div>
+    </div>
+
+    <div class="info-panel" id="serverInfoPanel">
+        <div class="row"><span class="label">🌐 IP máy chủ</span><span class="value" id="serverIP">192.168.1.100</span></div>
+        <div class="row"><span class="label">📡 Trạng thái</span><span class="value" id="serverStatus">✅ Đang kết nối</span></div>
+        <div class="row"><span class="label">⏱️ Ping</span><span class="value" id="serverPing">22 ms</span></div>
+        <div class="row"><span class="label">📊 Tải CPU</span><span class="value" id="cpuLoad">34%</span></div>
+    </div>
+
+    <!-- Swipe hint -->
+    <div class="swipe-hint">👆 Vuốt lên/xuống để cuộn danh sách</div>
+
+    <div class="footer">KAI HIDDEN v4.2 · TIPA CRACK NO KEY</div>
+</div>
+
+<script>
+    (function() {
+        "use strict";
+
+        // DOM references
+        const switches = document.querySelectorAll('.switch');
+        const sensSlider = document.getElementById('sensitivitySlider');
+        const sensVal = document.getElementById('sensVal');
+        const borrowBtn = document.getElementById('borrowBtn');
+        const stabilizeBtn = document.getElementById('stabilizeBtn');
+        const serverInfoBtn = document.getElementById('serverInfoBtn');
+
+        // Toggle switch handler
+        switches.forEach(sw => {
+            sw.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('active');
+                const target = this.dataset.target;
+                const isActive = this.classList.contains('active');
+                // Optional: hiển thị thông báo
+                console.log(`[${target}] đã ${isActive ? 'BẬT' : 'TẮT'}`);
+                // Nếu là AIM thì hiển thị thông báo đặc biệt
+                if (target === 'aim') {
+                    showToast(`AIM ${isActive ? 'được kích hoạt' : 'đã tắt'}`);
+                }
+            });
+        });
+
+        // Slider - hỗ trợ vuốt (thay đổi giá trị)
+        sensSlider.addEventListener('input', function() {
+            const val = this.value;
+            sensVal.textContent = val + '%';
+            // Có thể lưu giá trị vào biến toàn cục nếu cần
+            console.log('Độ nhạy Aim:', val);
+        });
+
+        // Nút Mượn
+        borrowBtn.addEventListener('click', function() {
+            showToast('📦 Đã mượn vũ khí hạng nặng! (hiệu ứng giả)');
+        });
+
+        // Nút Ổn định thiết bị
+        stabilizeBtn.addEventListener('click', function() {
+            // Giả lập tối ưu
+            const deviceName = document.getElementById('deviceName');
+            const ram = document.getElementById('ramInfo');
+            const battery = document.getElementById('batteryInfo');
+            // Thay đổi giả lập
+            const oldRam = ram.textContent;
+            ram.textContent = '6.8 GB / 8 GB';
+            battery.textContent = '92%';
+            showToast('⚙️ Đã ổn định thiết bị (giả lập)');
+            // Sau 2s trả lại (cho vui)
+            setTimeout(() => {
+                ram.textContent = oldRam;
+                battery.textContent = '87%';
+            }, 2000);
+        });
+
+        // Nút Server Info - hiển thị thông số máy chủ (tự động cập nhật)
+        serverInfoBtn.addEventListener('click', function() {
+            const ip = document.getElementById('serverIP');
+            const status = document.getElementById('serverStatus');
+            const ping = document.getElementById('serverPing');
+            const cpu = document.getElementById('cpuLoad');
+            // Giả lập thay đổi
+            const oldIp = ip.textContent;
+            ip.textContent = '10.0.0.' + Math.floor(Math.random() * 255);
+            status.textContent = '✅ Đang kết nối';
+            ping.textContent = Math.floor(Math.random() * 30 + 10) + ' ms';
+            cpu.textContent = Math.floor(Math.random() * 50 + 10) + '%';
+            showToast('🔄 Đã làm mới thông số máy chủ');
+            // Có thể reset sau 3s
+        });
+
+        // Toast thông báo đơn giản
+        function showToast(msg) {
+            let toast = document.createElement('div');
+            toast.textContent = msg;
+            Object.assign(toast.style, {
+                position: 'fixed',
+                bottom: '20px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#1e2a3a',
+                color: '#e0e6f0',
+                padding: '12px 24px',
+                borderRadius: '30px',
+                fontSize: '14px',
+                fontWeight: '500',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.6)',
+                zIndex: '999',
+                border: '1px solid #3b6ea0',
+                transition: 'opacity 0.3s',
+                opacity: '0'
+            });
+            document.body.appendChild(toast);
+            // Fade in
+            requestAnimationFrame(() => { toast.style.opacity = '1'; });
+            // Fade out sau 2.5s
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
+        }
+
+        // Tự động cập nhật thông số máy chủ mỗi 10s (giả lập)
+        setInterval(() => {
+            const ping = document.getElementById('serverPing');
+            const cpu = document.getElementById('cpuLoad');
+            if (ping) ping.textContent = Math.floor(Math.random() * 30 + 8) + ' ms';
+            if (cpu) cpu.textContent = Math.floor(Math.random() * 40 + 15) + '%';
+        }, 10000);
+
+        // Khởi tạo thông số thiết bị (có thể lấy từ navigator)
+        const deviceName = document.getElementById('deviceName');
+        const osVersion = document.getElementById('osVersion');
+        if (navigator.userAgent) {
+            const ua = navigator.userAgent;
+            if (ua.includes('iPhone')) deviceName.textContent = 'iPhone 15 Pro Max';
+            else if (ua.includes('Android')) deviceName.textContent = 'Samsung Galaxy S24';
+            else deviceName.textContent = 'Máy tính';
+        }
+        // Giả lập OS
+        osVersion.textContent = navigator.platform === 'iPhone' ? 'iOS 18.2' : 'Android 14';
+
+        // Bắt sự kiện vuốt (touch) - hiển thị hint
+        let touchStartY = 0;
+        document.addEventListener('touchstart', function(e) {
+            touchStartY = e.touches[0].clientY;
+        });
+        document.addEventListener('touchmove', function(e) {
+            const deltaY = e.touches[0].clientY - touchStartY;
+            if (Math.abs(deltaY) > 30) {
+                // Vuốt đã được phát hiện, có thể thêm hiệu ứng
+                // Nhưng không cần làm gì thêm
+            }
+        });
+
+        // Bắt sự kiện chuột cuộn (cho desktop)
+        document.addEventListener('wheel', function(e) {
+            // Vuốt bằng chuột
+        });
+
+        console.log('✅ Ứng dụng KAI HIDDEN đã sẵn sàng!');
+    })();
+</script>
+
+</body>
+</html>
